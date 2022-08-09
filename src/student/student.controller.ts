@@ -6,7 +6,7 @@ import {
   Param,
   Patch,
   Post,
-} from '@nestjs/common';
+} from '@nestjs/common'; 
 import { StudentService } from './student.service';
 
 @Controller('student')
@@ -20,7 +20,9 @@ export class StudentController {
 
   @Get(':index')
   getSpecificStudent(@Param() index) {
-    return this.studentService.getSpecificStudent(index);
+    console.log(index);
+    
+    return this.studentService.getSpecificStudent(index.index);
   }
 
   @Post()
@@ -35,6 +37,6 @@ export class StudentController {
 
   @Patch(':id')
   updateStudent(@Param() id, @Body() student) {
-    return this.studentService.updateStudent(id, student);
+    return this.studentService.updateStudent(id.id, student);
   }
 }

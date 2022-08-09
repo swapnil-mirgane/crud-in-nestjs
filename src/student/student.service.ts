@@ -21,7 +21,7 @@ export class StudentService {
     return this.students.splice(index, 1);
   }
 
-  updateStudent(id, student) {
+  updateStudent(id:number, student:object) {
     return (this.students[id] = student);
   }
 }
