@@ -5,5 +5,8 @@ export class AppService {
   getHello(): string {
     return `API's are working`;
   }
-  
+  getHel(): string {
+    return `API's are working`;
+  }
+
 }
